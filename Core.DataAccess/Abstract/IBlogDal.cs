@@ -9,6 +9,6 @@ namespace Core.DataAccess.Abstract
 {
     public interface IBlogDal : IGenericRepository<Blog>
     {
-        
+        List<Blog> GetListWithCategory();
     }
 }

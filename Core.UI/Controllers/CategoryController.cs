@@ -12,6 +12,7 @@ namespace Core.UI.Controllers
     {
 
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
+
         public IActionResult Index()
         {
             var values = categoryManager.GetAll();

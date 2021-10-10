@@ -12,7 +12,8 @@ namespace Core.DataAccess.Concrete.EntityFramework.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=(localdb)\\MSSQLLocalDB;database=CoreBlogDb; Integrated Security=True;");
+            optionsBuilder.UseSqlServer("Server=192.168.1.118;database=CoreBlogDb;Persist Security Info=True;User ID=sa;Password=test");
+            //optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;database=CoreBlogDb; Integrated Security=True;");
         }
 
         public DbSet<About> Abouts { get; set; }

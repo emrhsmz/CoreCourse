@@ -1,10 +1,9 @@
-﻿@using Core.Entity.Concrete
-@model List<Category>
+﻿@model List<Category>
 
 @{
     ViewData["Title"] = "Category List";
 }
-<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
 <table class="table table-bordered">
     <tr>
         <th>ID</th>
@@ -15,12 +14,12 @@
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
-            <td>@item.Id</td>
-            <td>@item.Name</td>
-            <td>@item.isStatus</td>
-            <td><a href="#" class="btn btn-info">Detail</a></td>
-            <td><a href="#" class="btn btn-warning">Delete</a></td>
-        </tr>
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.Name</td>
+        <td>@item.isStatus</td>
+        <td><a href="#" class="btn btn-info">Detail</a></td>
+        <td><a href="#" class="btn btn-warning">Delete</a></td>
+    </tr>
     }
 </table>

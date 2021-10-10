@@ -23,4 +23,22 @@
     <ProjectReference Include="..\Core.Entity\Core.Entity.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Blog\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Blog\" />
+    <Folder Include="wwwroot\theme\" />
+    <Folder Include="wwwroot\theme\css\" />
+    <Folder Include="wwwroot\theme\images\" />
+    <Folder Include="wwwroot\theme\js\" />
+    <Folder Include="wwwroot\theme\webfonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\_web\" />
+    <Content Remove="wwwroot\_web\css\" />
+    <Content Remove="wwwroot\_web\images\" />
+    <Content Remove="wwwroot\_web\js\" />
+    <Content Remove="wwwroot\_web\webfonts\" />
+  </ItemGroup>
 </Project>
