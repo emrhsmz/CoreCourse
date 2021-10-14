@@ -10,26 +10,26 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Core.UI.Controllers
 {
-    public class BlogController : Controller
+    public class CommentController : Controller
     {
-        BlogManager blogManager = new BlogManager(new EfBlogDal());
-        
-        public IActionResult Index()
-        {
-            var values = blogManager.GetListWithCategory();
-            return View(values);
-        }
 
-        /*public IActionResult Details()
+        CommentManager commentManager = new CommentManager(new EfCommentDal());
+
+        // GET: /<controller>/
+        public IActionResult Index()
         {
             return View();
         }
-        */
 
-        public IActionResult Details(int id)
+        public PartialViewResult AddCommentPartialView()
         {
-            var value = blogManager.GetById(id);
-            return View(value);
+            return PartialView();
+        }
+
+        public PartialViewResult CommentListByBlogPartialView(int id)
+        {
+            var values = commentManager.GetAll(id);
+            return PartialView(values);
         }
     }
 }

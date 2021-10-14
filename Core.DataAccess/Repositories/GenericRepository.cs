@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,19 +30,21 @@ namespace Core.DataAccess.Repositories
             }
         }
 
-        public List<T> GetAll()
+        public List<T> GetAll(Expression<Func<T, bool>> filter = null)
         {
             using (CoreDbContext context = new CoreDbContext())
             {
-                return context.Set<T>().ToList();
+                return filter == null
+                    ? context.Set<T>().ToList()
+                    : context.Set<T>().Where(filter).ToList();
             }
         }
 
-        public T GetById(int id)
+        public T GetById(Expression<Func<T, bool>> filter)
         {
             using (CoreDbContext context = new CoreDbContext())
             {
-                return context.Set<T>().Find(id);
+                return context.Set<T>().SingleOrDefault(filter);
             }
         }
 

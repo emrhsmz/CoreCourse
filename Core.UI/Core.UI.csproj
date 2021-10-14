@@ -25,6 +25,15 @@
 
   <ItemGroup>
     <None Remove="Views\Blog\" />
+    <None Remove="Views\Comment\" />
+    <None Remove="ViewComponents\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\CommentList\" />
+    <None Remove="ViewComponents\Comment\" />
+    <None Remove="Views\Shared\Components\CommentListByBlog\" />
+    <None Remove="ViewComponents\Category\" />
+    <None Remove="Views\Shared\Components\CategoryList\" />
+    <None Remove="Views\Register\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Blog\" />
@@ -33,6 +42,15 @@
     <Folder Include="wwwroot\theme\images\" />
     <Folder Include="wwwroot\theme\js\" />
     <Folder Include="wwwroot\theme\webfonts\" />
+    <Folder Include="Views\Comment\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\CommentList\" />
+    <Folder Include="ViewComponents\Comment\" />
+    <Folder Include="Views\Shared\Components\CommentListByBlog\" />
+    <Folder Include="ViewComponents\Category\" />
+    <Folder Include="Views\Shared\Components\CategoryList\" />
+    <Folder Include="Views\Register\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\_web\" />

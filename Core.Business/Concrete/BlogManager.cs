@@ -32,7 +32,7 @@ namespace Core.Business.Concrete
 
         public Blog GetById(int id)
         {
-            return _blogDal.GetById(id);
+            return _blogDal.GetById(x => x.Id == id);
         }
 
         public List<Blog> GetListWithCategory()
