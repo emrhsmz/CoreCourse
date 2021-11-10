@@ -1,0 +1,8 @@
+﻿@model List<UserComment>
+
+    <h4>Yorumlar</h4>
+    @foreach (var item in Model)
+    {
+        <p>@item.Id</p>
+        <p>@item.UserName</p>
+    }

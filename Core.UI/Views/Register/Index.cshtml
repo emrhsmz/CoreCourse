@@ -1,0 +1,60 @@
+﻿@model Writter
+@{
+    ViewData["Title"] = "Yazar Kayıt Sayfası";
+}
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <h3 class="tittle">Yazar Kayıt Sayfası</h3>
+
+        @if (ViewBag.Info != null)
+        {
+            <div class="alert alert-warning">@ViewBag.Info</div>
+        }
+        <div class="inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+                <form action="/Register/Index" method="post">
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom01">Adınız Soyadınız</label>
+                            @Html.TextBoxFor(m => m.Name, null, new { @class = "form-control", placeholder = "Lütfen Adınızı ve Soyadınızı giriniz", required = "required" })
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom01">E-Posta Adresiniz</label>
+                            @Html.TextBoxFor(m => m.Email, null, new { @type = "email", @class = "form-control", placeholder = "Lütfen E-Posta Adresinizi giriniz", required = "required" })
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword1 mb-2">Password</label>
+                            @Html.TextBoxFor(m => m.Password, null, new { @type = "password", @class = "form-control", placeholder = "Lütfen Şifrenizi giriniz", required = "required" })
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword2 mb-2">Confirm Password</label>
+                            <input type="password" name="ConfirmPassword" class="form-control" id="ConfirmPassword" placeholder="Parolayı Tekrar Giriniz" required="" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword2 mb-2">Görsel</label>
+                            @Html.TextBoxFor(m => m.Image, null, new { @type = "file", @class = "form-control" })
+                            
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit mb-4">Kayıt Ol</button>
+                    <p>
+                        <a href="#">Tüm Şartları Okudum, Kabul Ediyorum.</a>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <button class="btn btn-info" id="btn1" name="btn1">Button</button>
+    <script type="text/javascript">
+        ()
+    </script>
+</section>

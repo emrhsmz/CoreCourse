@@ -1,0 +1,25 @@
+﻿@model List<Category>
+
+@{
+    ViewData["Title"] = "Category List";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>-</th>
+        <th>-</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.Name</td>
+        <td>@item.isStatus</td>
+        <td><a href="#" class="btn btn-info">Detail</a></td>
+        <td><a href="#" class="btn btn-warning">Delete</a></td>
+    </tr>
+    }
+</table>
